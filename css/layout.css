@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+@import './variaveis.css';
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--texto-primario);
+  background: var(--gradiente-aurora);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grid 12 colunas */
+.container {
+  width: 1200px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--esp-2);
+  padding: var(--esp-4) 0;
+}
+
+/* Header */
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--esp-2) 0;
+}
+
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 56px; }
+
+.nav {
+  display: flex;
+  gap: var(--esp-3);
+  align-items: center;
+}
+
+.nav a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  grid-column: 1 / -1;
+  min-height: 420px;
+  display: grid;
+  align-items: center;
+  padding: var(--esp-4) 0;
+  color: var(--texto-claro);
+}
+
+.hero .conteudo {
+  grid-column: 2 / 8;
+}
+
+.hero h1 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--fs-xxl);
+  margin: 0 0 var(--esp-2) 0;
+}
+
+.hero p {
+  font-size: var(--fs-md);
+  margin: 0 0 var(--esp-3) 0;
+}
+
+/* Footer */
+.footer {
+  grid-column: 1 / -1;
+  background: var(--cor-1-escura);
+  color: var(--texto-claro);
+  padding: var(--esp-3) 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) { .container { width: 95%; } }
+@media (max-width: 992px) {
+  .hero .conteudo { grid-column: 1 / -1; padding: 0 var(--esp-2); }
+}
+@media (max-width: 768px) {
+  .logo img { height: 48px; }
+  .hero { min-height: 340px; }
+}
+@media (max-width: 576px) {
+  .container { gap: var(--esp-1); }
+  .nav { display: none; }
+  .menu-toggle { display: block; }
+}

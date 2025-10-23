@@ -1,0 +1,44 @@
+:root {
+  /* 🌑 Paleta de Cores */
+  --cor-1-escura: #2C1B2E;
+  --cor-2-profunda: #4B2E3F;
+  --cor-3-vinho: #7E324E;
+  --cor-4-coral: #D75A4A;
+  --cor-5-dourado: #F6A960;
+  --cor-6-pessego: #FCD5A4;
+  --cor-7-clara: #FFF8ED;
+  --cor-8-neutra: #EDEDED;
+
+  /* Gradientes */
+  --gradiente-aurora: linear-gradient(135deg, #2C1B2E 0%, #7E324E 30%, #D75A4A 60%, #FCD5A4 100%);
+  --gradiente-dourado: linear-gradient(90deg, #D75A4A, #F6A960);
+  --gradiente-suave: linear-gradient(180deg, #FCD5A4, #FFF8ED);
+
+  /* Tipografia */
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-texto: 'Poppins', sans-serif;
+
+  /* Tamanhos de Fonte */
+  --fs-xxl: 48px;
+  --fs-xl: 32px;
+  --fs-lg: 24px;
+  --fs-md: 18px;
+  --fs-sm: 14px;
+
+  /* Espaçamento Modular */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+
+  /* Textos e Estados */
+  --texto-primario: #2C1B2E;
+  --texto-secundario: #4B2E3F;
+  --texto-claro: #FFF8ED;
+
+  --sucesso: #4CAF50;
+  --erro: #E53935;
+  --aviso: #F6A960;
+}

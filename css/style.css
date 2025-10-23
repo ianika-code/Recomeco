@@ -1,0 +1,114 @@
+@import './variaveis.css';
+@import './layout.css';
+@import './componentes.css';
+
+/* Header transparente */
+header.site-header {
+  background: transparent;
+}
+
+/* Espaçamento padrão para conteúdo principal */
+.main-content {
+  padding: var(--esp-4) 0;
+}
+
+/* Grid de projetos */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--esp-3);
+}
+
+@media (max-width: 992px) {
+  .grid-projetos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-projetos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards de perfil (voluntárias) */
+.profile {
+  display: flex;
+  gap: var(--esp-2);
+  align-items: center;
+}
+
+.profile img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Container do footer */
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Menu dropdown */
+.has-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.has-dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--cor-7-clara);
+  padding: var(--esp-2);
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.has-dropdown.open ul {
+  display: block;
+}
+
+.has-dropdown ul li {
+  list-style: none;
+  margin-bottom: var(--esp-1);
+}
+
+.has-dropdown ul li a {
+  color: var(--texto-primario);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Menu mobile toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--texto-claro);
+  cursor: pointer;
+}
+
+.nav--ativo {
+  display: flex !important;
+  flex-direction: column;
+  background: var(--cor-1-escura);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  padding: var(--esp-2);
+  z-index: 999;
+}
+
+@media (max-width: 576px) {
+  .menu-toggle {
+    display: block;
+  }
+}
