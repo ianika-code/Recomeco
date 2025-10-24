@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Doações — Recomeço</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header">
+      <div class="logo">
+        <img src="imagens/logo.png" alt="Recomeço — logo">
+        <div>
+          <div style="font-weight:700;color:var(--texto-claro);">Recomeço</div>
+          <div style="font-size:12px;color:rgba(255,248,237,0.8);">Porque toda mulher merece reescrever sua história</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <div class="has-dropdown">
+          <a href="sobre.html">Sobre</a>
+          <ul>
+            <li><a href="sobre.html">A ONG</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+          </ul>
+        </div>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarias.html">Voluntárias</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="main-content">
+      <div class="container">
+        <!-- Título com faixa escura -->
+        <div style="grid-column:1 / -1;">
+          <div style="background:rgba(44,27,46,0.8);padding:16px;border-radius:8px;margin-bottom:var(--esp-3);">
+            <h1 style="font-family:var(--fonte-titulo);color:white;margin:0;">Faça uma Doação</h1>
+          </div>
+        </div>
+
+        <!-- Texto explicativo -->
+        <div style="grid-column:1 / -1;">
+          <div class="card fade-in">
+            <p>Seu apoio é essencial para manter nossos projetos ativos e transformar vidas. Com sua doação, conseguimos oferecer atendimento psicológico, capacitação profissional e apoio jurídico para mulheres em situação de vulnerabilidade.</p>
+            <p>Você pode doar qualquer valor e ajudar a construir um futuro mais justo e acolhedor.</p>
+            <div style="margin-top:var(--esp-3);text-align:center;">
+              <a href="#" class="btn btn-primary">Fazer doação</a>
+              <!-- Substitua o href="#" por um link real de pagamento -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Doação via Pix -->
+        <div style="grid-column:1 / -1;">
+          <div class="card fade-in" style="margin-top: var(--esp-3);">
+            <h3>Doação via Pix</h3>
+            <p>Você também pode contribuir com qualquer valor usando nossa chave Pix:</p>
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <input type="text" id="chavePix" value="doacoes@recomecco.org" readonly style="opacity:0; position:absolute; left:-9999px;">
+              <button class="btn btn-secondary" onclick="copiarPix()">Copiar chave Pix</button>
+              <span id="confirmacaoPix" style="color: var(--cor-4-coral); display: none;">Chave copiada!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© Recomeço — Todos os direitos reservados</div>
+      <div>Contato: contato@recomecco.org</div>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script>
+    function copiarPix() {
+      const input = document.getElementById("chavePix");
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+
+      const confirmacao = document.getElementById("confirmacaoPix");
+      confirmacao.style.display = "inline";
+      setTimeout(() => {
+        confirmacao.style.display = "none";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

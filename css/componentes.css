@@ -201,3 +201,23 @@ select:focus {
     transform: none;
   }
 }
+
+/* Imagem da seção hero responsiva */
+.hero-imagem img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(44,27,46,0.18);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+  }
+
+  .hero-imagem {
+    margin-top: var(--esp-3);
+  }
+}
